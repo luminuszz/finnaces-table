@@ -5,10 +5,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 const withPlugins = require('next-compose-plugins');
 const withImages = require('next-images');
+const withSass = require('@zeit/next-sass');
 
 module.exports = withPlugins([
   [withBundleAnalyzer({})],
   withImages,
+  withSass,
   {
     trailingSlash: true,
 
@@ -16,6 +18,16 @@ module.exports = withPlugins([
 
     typescript: {
       ignoreBuildErrors: true,
+    },
+
+    async redirects() {
+      return [
+        {
+          source: '/',
+          destination: '/login',
+          permanent: true,
+        },
+      ];
     },
   },
 ]);

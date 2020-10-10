@@ -1,0 +1,48 @@
+// variables
+
+$family-primary: 'Roboto';
+$family-secondary: 'Montserrat';
+$color-background: #181b2b;
+$color-neutral: #ffff;
+
+:root {
+  background: $color-background;
+  scroll-behavior: smooth;
+  --family-primary: 'Roboto';
+  --family-secondary: 'Montserrat';
+  --color-background: #181b2b;
+  --color-neutral: #ffff;
+}
+
+// imports
+@import '../../node_modules/bulma/bulma.sass';
+
+html,
+body,
+__#next {
+  height: 100vh;
+  color: $color-neutral;
+}
+
+.removeScroll {
+  overflow: hidden !important;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.set-opacity {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background: var(--color-background);
+  opacity: 0.9;
+}
