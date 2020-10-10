@@ -23,7 +23,9 @@
       "@/assets/*": ["assets/*"],
       "@/styles/*": ["styles/*"],
       "@/config/*": ["config/*"],
-      "@/hooks/*": ["hooks/*"]
+      "@/hooks/*": ["hooks/*"],
+      "@/services/*": ["services/*"],
+      "@/validators/*": ["validators/*"]
     },
   },
   "include": [
